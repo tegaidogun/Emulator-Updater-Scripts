@@ -16,7 +16,7 @@ try:
         open(xenia_zip_file, "wb").write(response.content)
 
         with ZipFile(xenia_zip_file) as xenia_latest_zip_file:
-            xenia_latest_zip_file.extractall(path ="../")
+            xenia_latest_zip_file.extractall()
 
         version_file = open("version.txt", "w")
         version_file.write(current_version)
